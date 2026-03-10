@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { tikdown } from "tiktok-scraper-without-watermark";
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,22 +9,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "URL is required", success: false }, { status: 400 });
     }
 
-    // Try to get video details using the scraper
-    const data = await tikdown(url);
+    // Try to get video details using the reliable TikWM API
+    const tikwmApiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`;
+    const response = await fetch(tikwmApiUrl);
+    const data = await response.json();
 
-    if (!data || !data.video) {
-        return NextResponse.json({ error: "Could not fetch video data", success: false }, { status: 404 });
+    if (data.code !== 0 || !data.data) {
+        return NextResponse.json({ error: "Could not fetch video data. The video might be private or deleted.", success: false }, { status: 404 });
     }
 
-    // Usually TikTok URLs redirect to the actual video page which has an ID
-    // So we just take the details and format them into the response
+    const { data: videoInfo } = data;
+
     return NextResponse.json({
         success: true,
-        videoUrl: data.video, // The URL to the video source without watermark
-        title: data.title || "TikTok Video",
-        author: data.author?.nickname || data.author?.unique_id || "Unknown Author",
-        duration: 0, // scraper doesn't typically provide this easily without deep inspection
-        cover: data.cover || "",
+        videoUrl: videoInfo.play, // The URL to the video source without watermark
+        title: videoInfo.title || "TikTok Video",
+        author: videoInfo.author?.nickname || videoInfo.author?.unique_id || "Unknown Author",
+        duration: videoInfo.duration || 0,
+        cover: videoInfo.cover || "",
     });
 
   } catch (error) {
