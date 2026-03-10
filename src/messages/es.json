@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "badge": "Sin marca de agua · Alta calidad",
+    "title": "Descargar Vídeo de TikTok Sin Marca de Agua",
+    "subtitle": "Descarga vídeos de TikTok sin marca de agua al instante"
+  },
+  "downloader": {
+    "ariaLabel": "Descargador de vídeos de TikTok",
+    "placeholder": "Pega el enlace de TikTok aquí...",
+    "inputAriaLabel": "URL del vídeo de TikTok",
+    "download": "Descargar",
+    "processing": "Procesando…",
+    "linkHint": "Acepta enlaces de tiktok.com y vm.tiktok.com"
+  },
+  "errors": {
+    "emptyUrl": "Pega el enlace del vídeo de TikTok.",
+    "downloadFailed": "Error al descargar. Inténtalo de nuevo.",
+    "videoUnavailable": "No se pudo obtener el vídeo. Inténtalo de nuevo.",
+    "network": "Error de conexión. Comprueba tu internet e inténtalo de nuevo."
+  },
+  "video": {
+    "downloaded": "Vídeo descargado",
+    "defaultTitle": "Vídeo de TikTok",
+    "unknownAuthor": "Desconocido",
+    "noSupport": "Tu navegador no admite la etiqueta de vídeo.",
+    "saveVideo": "Guardar vídeo"
+  },
+  "instructions": {
+    "title": "Cómo descargar vídeo de TikTok sin marca de agua",
+    "intro": "Nuestro descargador de TikTok permite guardar vídeos sin la marca de agua de la app. Solo sigue los pasos siguientes para descargar vídeos de TikTok en alta calidad, gratis y sin instalar programas.",
+    "step1": "Copia el enlace del vídeo en TikTok — Abre el vídeo en la app o en la web de TikTok y pulsa en \"Compartir\" para copiar el enlace.",
+    "step2": "Pega el enlace en la caja de arriba — En el campo de texto de esta página, pega el enlace que copiaste (Ctrl+V o pulsación larga y pegar).",
+    "step3": "Haz clic en Descargar — El sistema buscará el vídeo y preparará la versión sin marca de agua.",
+    "step4": "Guarda el vídeo sin marca de agua — Cuando aparezca el vídeo, haz clic en \"Guardar vídeo\" para descargarlo en tu dispositivo."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿El descargador de TikTok es gratuito?",
+    "a1": "Sí. Nuestro descargador de vídeos de TikTok es 100% gratuito. Puedes descargar todos los vídeos que quieras sin marca de agua, sin registrarte ni pagar nada.",
+    "q2": "¿Tengo que instalar alguna aplicación?",
+    "a2": "No. Todo funciona en el navegador. Solo tienes que entrar en el sitio, pegar el enlace del vídeo de TikTok y hacer clic en descargar. No hace falta instalar ninguna app en el móvil ni en el ordenador.",
+    "q3": "¿El vídeo queda sin marca de agua?",
+    "a3": "Sí. Los vídeos se descargan sin la marca de agua de TikTok. Recibes el vídeo en buena calidad, listo para ver o compartir sin el logo de la aplicación.",
+    "q4": "¿Funciona en el móvil?",
+    "a4": "Sí. El sitio funciona en móviles y tablets. Puedes abrir el enlace de TikTok en la app, copiar el enlace del vídeo, abrir nuestro sitio en el navegador y descargar sin marca de agua desde el móvil."
+  },
+  "footer": "Herramienta gratuita para descargar vídeos de TikTok",
+  "meta": {
+    "title": "Descargar Vídeo de TikTok Sin Marca de Agua Gratis | HD MP4",
+    "description": "Herramienta rápida y gratuita para descargar vídeos de TikTok sin marca de agua. Pega el enlace y descarga vídeos en formato MP4 de alta calidad al instante.",
+    "keywords": "descargar video tiktok sin marca de agua, tiktok mp4 gratis, tiktok downloader sin marca, snaptik, como guardar videos de tiktok hd"
+  }
+}

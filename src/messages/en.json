@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "badge": "No watermark · HD quality",
+    "title": "TikTok Video Downloader",
+    "subtitle": "Download TikTok videos without watermark instantly"
+  },
+  "downloader": {
+    "ariaLabel": "TikTok video downloader",
+    "placeholder": "Paste TikTok link here...",
+    "inputAriaLabel": "TikTok video URL",
+    "download": "Download",
+    "processing": "Processing…",
+    "linkHint": "Supports tiktok.com and vm.tiktok.com links"
+  },
+  "errors": {
+    "emptyUrl": "Please paste a TikTok video link.",
+    "downloadFailed": "Download failed. Please try again.",
+    "videoUnavailable": "Could not get video. Please try again.",
+    "network": "Network error. Check your connection and try again."
+  },
+  "video": {
+    "downloaded": "Video downloaded",
+    "defaultTitle": "TikTok video",
+    "unknownAuthor": "Unknown",
+    "noSupport": "Your browser does not support the video tag.",
+    "saveVideo": "Save video"
+  },
+  "instructions": {
+    "title": "How to download TikTok video without watermark",
+    "intro": "Our TikTok downloader lets you save videos without the app's watermark. Follow the steps below to download TikTok videos in high quality, for free, with no software to install.",
+    "step1": "Copy the video link on TikTok — Open the video in the TikTok app or website and tap \"Share\" to copy the link.",
+    "step2": "Paste the link in the box above — In the text field on this page, paste the link you copied (Ctrl+V or long-press and paste).",
+    "step3": "Click Download — The system will fetch the video and prepare the version without watermark.",
+    "step4": "Save the video without watermark — When the video appears, click \"Save video\" to download it to your device."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "Is the TikTok downloader free?",
+    "a1": "Yes. Our TikTok video downloader is 100% free. You can download as many videos as you want without watermark, with no sign-up or payment required.",
+    "q2": "Do I need to install any app?",
+    "a2": "No. Everything works in your browser. Just open the site, paste the TikTok video link, and click download. No need to install any app on your phone or computer.",
+    "q3": "Is the video without watermark?",
+    "a3": "Yes. Videos are downloaded without the TikTok watermark. You get the video in good quality, ready to watch or share without the app logo.",
+    "q4": "Does it work on mobile?",
+    "a4": "Yes. The site works on phones and tablets. You can open the TikTok link in the app, copy the video link, open our site in your browser, and download without watermark right on your phone."
+  },
+  "footer": "Free TikTok video downloader tool",
+  "meta": {
+    "title": "TikTok Video Downloader Without Watermark Free | HD MP4",
+    "description": "Fast and free tool to download TikTok videos without watermark. Paste the link and instantly download high-quality MP4 videos.",
+    "keywords": "tiktok downloader no watermark, save tiktok video mp4, free tiktok downloader hd, snaptik, download tiktok video online free"
+  }
+}
