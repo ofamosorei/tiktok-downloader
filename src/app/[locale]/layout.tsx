@@ -67,6 +67,9 @@ export async function generateMetadata({
       icon: "/favicon.ico",
       apple: "/apple-touch-icon.png",
     },
+    verification: {
+      google: "3hzRVvv1piw1svxfI6bgsDmXt7jZ4Stwn5LRdM1qMzQ",
+    },
   };
 }
 
