@@ -102,6 +102,27 @@ export function HomePage({ locale, messages }: { locale: Locale; messages: Messa
     }
   }
 
+  const handleDownload = async (url: string, filename: string) => {
+    try {
+      const proxyUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
+      const response = await fetch(proxyUrl);
+      if (!response.ok) throw new Error("Network response was not ok");
+      const blob = await response.blob();
+      const objectUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(objectUrl);
+    } catch (err) {
+      console.error("Error downloading file", err);
+      // Fallback
+      window.open(`/api/proxy?url=${encodeURIComponent(url)}`, "_blank");
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <script
@@ -244,18 +265,15 @@ export function HomePage({ locale, messages }: { locale: Locale; messages: Messa
                       {t("video.noSupport")}
                     </video>
                   </div>
-                  <a
-                    href={`/api/proxy?url=${encodeURIComponent(result.videoUrl)}`}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleDownload(result.videoUrl!, `${result.author}_video.mp4`)}
                     className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-4 text-base font-semibold text-white shadow-lg shadow-emerald-900/25 transition hover:bg-emerald-700 hover:shadow-xl dark:shadow-emerald-950/30"
                   >
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     {t("video.saveVideo")}
-                  </a>
+                  </button>
                 </>
               )}
 
@@ -272,18 +290,15 @@ export function HomePage({ locale, messages }: { locale: Locale; messages: Messa
                           <img src={item.url} alt={`Instagram Image ${index + 1}`} className="aspect-[4/5] w-full object-cover" />
                         )}
                       </div>
-                      <a
-                        href={`/api/proxy?url=${encodeURIComponent(item.url)}`}
-                        download
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => handleDownload(item.url, `${result.author}_${index + 1}.${item.type === "video" ? "mp4" : "jpg"}`)}
                         className="flex w-full items-center justify-center gap-2 rounded-lg bg-fuchsia-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-fuchsia-900/25 transition hover:bg-fuchsia-700"
                       >
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
                         {item.type === "video" ? t("video.saveVideo") : t("instagram.saveImage")}
-                      </a>
+                      </button>
                     </div>
                   ))}
                 </div>
